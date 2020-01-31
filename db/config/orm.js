@@ -2,6 +2,7 @@ const connection = require("../config/connection.js");
 
 const orm = {
 
+   // TODO: add methods
     //METHODS//
 
     selectAll()
