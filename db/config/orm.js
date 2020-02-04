@@ -31,10 +31,20 @@ const orm = {
 
 
 
-    updateOne()
+    updateOne: (tableInput, setCol, setColVal, whereCol, whereColVal, callback) => {
+
+        // SQL query string - Update record
+        const queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
+
+        // Query String
+        connection.query(queryString, [tableInput, setCol, setColVal, whereCol, whereColVal], (err, result) => {
+            if (err) throw err;
+            callback(result);
+        });
+    },
 
 
-}
+};
 
 
 
