@@ -1,7 +1,7 @@
 const connection = require("../config/connection.js");
 
 const orm = {
-    
+
     //METHODS//
 
     selectAll: (tableInput, callback) => {
@@ -17,7 +17,18 @@ const orm = {
     },
 
 
-    insertOne()
+    insertOne: (tableInput, colOneInput, colTwoInput, colOneValue, colTwoValue, callback) => {
+
+        // SQL query string - Insert record
+        const queryString = "INSERT INTO ?? (??, ??) VALUES (?, ?)";
+
+        // Query String
+        connection.query(queryString, [tableInput, colOneInput, colTwoInput, colOneValue, colTwoValue], (err, result) => {
+            if (err) throw err;
+            callback(result);
+        });
+    },
+
 
 
     updateOne()
