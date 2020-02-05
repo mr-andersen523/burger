@@ -29,8 +29,9 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
    1. Type `git clone` in your command line
    2. Then copy and paste `https://github.com/mr-andersen523/burger.git`
    3. Press `enter` 
-2. In your code editing terminal run `npm install`
-3. After installation, run `node server.js`
+2. Make sure to update your password and username in the `connection.js` file
+3. In your code editing terminal run `npm install`
+4. After installation, run `node server.js`
    
 ## Gif Demo
 - - - -
