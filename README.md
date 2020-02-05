@@ -11,6 +11,8 @@ This application is a burger logger made with MySQL, Node, Express, Handlebars a
 - - - -
 ![picture alt](preview/burger.png)
 
+Link to app: https://eat-da-burgers-node-app.herokuapp.com/
+
 ## Usage
 - - - -
 Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
@@ -30,7 +32,7 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 2. In your code editing terminal run `npm install`
 3. After installation, run `node server.js`
    
-## Demo
+## Gif Demo
 - - - -
-![gif alt](preview/)
+![gif alt](preview/burger-app.gif)
 
