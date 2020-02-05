@@ -45,6 +45,21 @@ router.put("/api/hamburger/:id", (req, res) => {
   });
 });
 
+// DELETE Route - Delete burger from db
+router.delete("/api/hamburger/:id", (req, res) => {
+  const id = req.params.id;
+  
+  // Deletes selected hamburger
+  burgers.delete(id, (result) => {
+    // Returns response for ajax call
+    if (result.affectedRows == 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
+
 
 
 module.exports = router;
