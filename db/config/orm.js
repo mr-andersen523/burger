@@ -43,9 +43,18 @@ const orm = {
         });
     },
 
+    delete: (tableInput, whereCol, whereColVal, callback) => {
 
+        // SQL query string - Delete Record
+        const queryString = "DELETE FROM ?? WHERE ?? = ?";
+
+        // Query String
+        connection.query(queryString, [tableInput, whereCol, whereColVal], (err, result) => {
+            if (err) throw err;
+            callback(result);
+        });
+    }
 };
-
 
 
 
