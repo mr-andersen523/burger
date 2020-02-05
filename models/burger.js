@@ -28,6 +28,13 @@ const burgers = {
         });
     },
 
+        // Delete method to call orm.delete
+    delete: (id, callback) => {
+        orm.delete("burgers", "id", id, (res) => {
+            callback(res);
+        });
+    }
+
 };
 // Export at the end of the `burger.js` file
 module.exports = burgers;
