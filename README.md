@@ -9,7 +9,7 @@ This application is a burger logger made with MySQL, Node, Express, Handlebars a
 
 ## Preview
 - - - -
-![picture alt](preview/)
+![picture alt](preview/burger.png)
 
 ## Usage
 - - - -
@@ -25,7 +25,7 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 - - - -
 1. Clone the repository to your working directory. 
    1. Type `git clone` in your command line
-   2. Then copy and paste `https://github.com/mr-andersen523/homework13.git`
+   2. Then copy and paste `https://github.com/mr-andersen523/burger.git`
    3. Press `enter` 
 2. In your code editing terminal run `npm install`
 3. After installation, run `node server.js`
