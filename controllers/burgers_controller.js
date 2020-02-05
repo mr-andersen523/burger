@@ -1,22 +1,23 @@
+// Dependencies
 const express = require("express");
-const burgers = require("../models/burger");
 const router = express.Router();
+const burgers = require("../models/burgers");
 
-// GET route - Receive all burgers from db
+
+
+// Get Route - all burgers from db
 router.get("/", (req, res) => {
 
     // returns all burgers from database to index.handlebars
     burgers.selectAll((data) => {
-        return res.render("index", { hamburgers: data });
-      });
-  });
-
-
-
-  // POST route - Add new burger to db
+      return res.render("index", { hamburgers: data });
+    });
+});
+  
+// Post Route - Add burger to db
 router.post("/api/hamburger", (req, res) => {
 
-    // Inserts hamburger to db
+  // Insert hamburger to db
   burgers.insert(req.body.name, false, (result) => {
     // Returns response for ajax call
     if (result.changedRows == 1) {
@@ -27,14 +28,12 @@ router.post("/api/hamburger", (req, res) => {
   });
 });
 
-
-
-// PUT Route - Updates hamburger to devoured
+// Put Route - Update burger to devoured
 router.put("/api/hamburger/:id", (req, res) => {
 
-    const id = req.params.id;
-    
-      // Update hamburger in db
+  const id = req.params.id;
+
+  // Update hamburger in db
   burgers.update(id, true, (result) => {
     // Returns response for ajax call
     if (result.changedRows == 0) {
@@ -45,11 +44,11 @@ router.put("/api/hamburger/:id", (req, res) => {
   });
 });
 
-// DELETE Route - Delete burger from db
+// Delete Route - Delete burger from db
 router.delete("/api/hamburger/:id", (req, res) => {
   const id = req.params.id;
   
-  // Deletes selected hamburger
+  // Delete burger
   burgers.delete(id, (result) => {
     // Returns response for ajax call
     if (result.affectedRows == 0) {
@@ -59,7 +58,7 @@ router.delete("/api/hamburger/:id", (req, res) => {
     }
   });
 });
-
-
+  
 
 module.exports = router;
+  

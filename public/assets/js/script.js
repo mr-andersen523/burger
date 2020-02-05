@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
     // devour button
@@ -7,11 +6,11 @@ $(document).ready(function() {
         // get ID of burger
         const id = $(this).data("id");
 
-        // Send the PUT request.
+        // Send PUT req
         $.ajax("/api/hamburger/" + id, {
             type: "PUT"
         }).then(() => {
-                // Reload the page to get the updated list
+                // Reload to update
                 location.reload();
             }
         );
@@ -24,11 +23,11 @@ $(document).ready(function() {
         // get ID of burger
         const id = $(this).data("id");
 
-        // Send the DELETE request.
+        // Send DELETE req.
         $.ajax("/api/hamburger/" + id, {
             type: "DELETE"
         }).then(() => {
-                // Reload the page to get the updated list
+                // Reload to update
                 location.reload();
             }
         );
@@ -39,18 +38,18 @@ $(document).ready(function() {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
-        // Create object for POST request
+        // Create obj for POST req
         let burgerName = { name: $("#burgerName").val().trim()};                               
 
-        // Send the POST request.
+        // Send  POST req
         $.ajax("/api/hamburger", {
         type: "POST",
         data: burgerName
         }).then(() => {
-            // Reload the page to get the updated list
+            // Reload to update
             location.reload();
         }
         );
     });
 
-});  // Ending of Ready Function
+}); 
