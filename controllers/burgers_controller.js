@@ -1,5 +1,5 @@
 const express = require("express");
-const burgers = require("../models/burgers");
+const burgers = require("../models/burger");
 const router = express.Router();
 
 // GET route - Receive all burgers from db
