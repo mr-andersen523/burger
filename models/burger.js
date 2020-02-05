@@ -1,5 +1,5 @@
 // import `orm.js` 
-const orm = require("../config/orm.js");
+const orm = require("../db/config/orm");
 
 // code that will call the ORM functions using burger specific input for the ORM
 // Burger Model
